@@ -9,6 +9,12 @@
 
 .btnComponentcontroller {
     margin: 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.btnComponentcontroller button {
+    flex: 1 1 120px;
 }
 
 
