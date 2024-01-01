@@ -41,7 +41,7 @@ const AddProducts = () => {
     
     axios.post(`/products` , inputValue).then(response => {
     }).catch(error =>{
-      
+
     })
   }
 
@@ -60,7 +60,11 @@ const AddProducts = () => {
         <input value={inputValue.description} onChange={onInputChange} type="text" placeholder='Description' name='description' />
         <input value={inputValue.price} onChange={onInputChange} type="number" placeholder='Price' name='price' />
         <input onChange={onInputChange} type="file" name='file' />
-        <button type='submit'>Add Product</button>
+
+        {/* showing button if everyfield is filled */}
+        {inputValue.title && inputValue.category && inputValue.price && inputValue.description && inputValue.image &&
+          <button type='submit'>Add Product</button>
+        }
       </form>
     </div>
   )
