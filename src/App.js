@@ -1,9 +1,27 @@
 import { useState } from "react";
+import axios from 'axios';
 import style from './App.module.css'
 import GetProducts from "./components/GetProducts";
 import AddProducts from "./components/AddProducts";
 import PutProducts from "./components/PutProducts";
 import DeleteProduct from "./components/DeleteProduct";
+
+
+
+// Axios config
+axios.defaults.baseURL = 'https://fakestoreapi.com';
+axios.interceptors.request.use((request) => {
+  console.log(request)
+  return request;
+})
+axios.interceptors.response.use((response) => {
+  console.log(response);
+  return response.data;
+})
+
+
+
+
 
 function App() {
   const [showComponent, setShowComponent] = useState({
