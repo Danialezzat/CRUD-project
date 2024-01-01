@@ -2,7 +2,12 @@ import React from 'react'
 
 const AddProducts = () => {
   return (
-    <div>
+    <div style={{
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      rowGap: '20px'
+    }}>
       <h3>Add a New Product</h3>
       <form action="">
         <input type="text" placeholder='Title'name='title' />

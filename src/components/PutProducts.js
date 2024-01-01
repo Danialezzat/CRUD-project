@@ -2,7 +2,12 @@ import React from 'react'
 
 const PutProducts = () => {
   return (
-    <div>
+    <div style={{
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      rowGap: '20px'
+    }}>
       <h3>Edit a Product</h3>
       <form action="">
         <input type="number" placeholder='Id'name='id' />

@@ -1,0 +1,14 @@
+.maincontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+}
+
+.btnComponentcontroller {
+    margin: 40px 0;
+}
+
+

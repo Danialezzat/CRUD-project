@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./App.css";
+import style from './App.module.css'
 import GetProducts from "./components/GetProducts";
 import AddProducts from "./components/AddProducts";
 import PutProducts from "./components/PutProducts";
@@ -21,8 +21,8 @@ function App() {
   };
 
   return (
-    <div>
-      <div>
+    <div className={style.maincontainer}>
+      <div className={style.btnComponentcontroller}>
         <button name="get" onClick={btnHandler}>
           All Products
         </button>
