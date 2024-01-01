@@ -2,8 +2,11 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      
+    <div>
+      <button>Get Products</button>
+      <button>Add Pruducts</button>
+      <button>Edit Products</button>
+      <button>Delete Products</button>
     </div>
   );
 }
