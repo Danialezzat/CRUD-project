@@ -1,17 +1,17 @@
 import axios from 'axios';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import ItemProduct from './ItemProduct'
 import Loading from './Loading'
 
 const GetProducts = () => {
-
+  const [listProducts, setListProducts] = useState([])
 
   useEffect(() => {
     getAllData()
   }, []);
 
   const getAllData =() => {
-    axios.get(`/products`).then(response => console.log(response)).catch(error => console.log(error.message))
+    axios.get(`/products`).then(response => setListProducts(response)).catch(error => console.log(error.message))
   };
 
 
@@ -33,13 +33,9 @@ const GetProducts = () => {
         width: "90%",
         margin: 'auto'
       }}>
-          <ItemProduct />
-          <ItemProduct />
-          <ItemProduct />
-          <ItemProduct />
-          <ItemProduct />
-          <ItemProduct />
-          <ItemProduct />
+          {
+            listProducts.map((element) => <ItemProduct key={element.id} data={element} />)
+          }
       </div>
     </div>
   )
