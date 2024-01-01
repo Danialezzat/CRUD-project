@@ -3,7 +3,20 @@ import ItemProduct from './ItemProduct'
 
 const GetProducts = () => {
   return (
-    <div>
+    <div style={{
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      flexWrap: 'wrap',
+      width: "90%",
+      margin: 'auto'
+    }}>
+        <ItemProduct />
+        <ItemProduct />
+        <ItemProduct />
+        <ItemProduct />
+        <ItemProduct />
+        <ItemProduct />
         <ItemProduct />
     </div>
   )
