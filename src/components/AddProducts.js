@@ -11,7 +11,6 @@ const AddProducts = () => {
     image: ''
   })
 
-  let formData = new FormData();
 
   const onInputChange = (event) => {
     switch (event.target.name) {
@@ -62,7 +61,12 @@ const AddProducts = () => {
         <input onChange={onInputChange} type="file" name='file' />
 
         {/* showing button if everyfield is filled */}
-        {inputValue.title && inputValue.category && inputValue.price && inputValue.description && inputValue.image &&
+        {inputValue.title
+        && inputValue.category
+        && inputValue.price
+        && inputValue.description 
+        && inputValue.image 
+        &&
           <button type='submit'>Add Product</button>
         }
       </form>
