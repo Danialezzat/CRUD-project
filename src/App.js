@@ -24,7 +24,7 @@ function App() {
     <div>
       <div>
         <button name="get" onClick={btnHandler}>
-          Get Products
+          All Products
         </button>
         <button name="add" onClick={btnHandler}>
           Add Pruducts
