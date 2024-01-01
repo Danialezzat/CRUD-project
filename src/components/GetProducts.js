@@ -5,13 +5,19 @@ import Loading from './Loading'
 
 const GetProducts = () => {
   const [listProducts, setListProducts] = useState([])
+  const [isShowLoading, setIsShowLoading] = useState(true)
 
   useEffect(() => {
     getAllData()
   }, []);
 
   const getAllData =() => {
-    axios.get(`/products`).then(response => setListProducts(response)).catch(error => console.log(error.message))
+    axios.get(`/products`).then(response => {
+      setListProducts(response);
+      setIsShowLoading(false)
+    }).catch(error =>{
+      setIsShowLoading(false)
+    })
   };
 
 
@@ -24,7 +30,9 @@ const GetProducts = () => {
       flexDirection: 'column',
       rowGap: '50px'
     }}>
-      <Loading />
+      {
+        isShowLoading && <Loading /> 
+      }
       <div style={{
         display: 'flex',
         justifyContent: 'center',
