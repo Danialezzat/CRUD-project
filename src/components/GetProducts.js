@@ -1,5 +1,6 @@
 import React from 'react'
 import ItemProduct from './ItemProduct'
+import Loading from './Loading'
 
 const GetProducts = () => {
   return (
@@ -7,17 +8,26 @@ const GetProducts = () => {
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      flexWrap: 'wrap',
-      width: "90%",
-      margin: 'auto'
+      flexDirection: 'column',
+      rowGap: '50px'
     }}>
-        <ItemProduct />
-        <ItemProduct />
-        <ItemProduct />
-        <ItemProduct />
-        <ItemProduct />
-        <ItemProduct />
-        <ItemProduct />
+      <Loading />
+      <div style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexWrap: 'wrap',
+        width: "90%",
+        margin: 'auto'
+      }}>
+          <ItemProduct />
+          <ItemProduct />
+          <ItemProduct />
+          <ItemProduct />
+          <ItemProduct />
+          <ItemProduct />
+          <ItemProduct />
+      </div>
     </div>
   )
 }
